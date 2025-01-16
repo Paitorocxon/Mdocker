@@ -1,0 +1,110 @@
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Open Sans', Arial, sans-serif; /* Modernere Schrift */
+    display: flex;
+    margin: 0;
+    height: 100%;
+    background-color: #1C1C1C; /* Dunkles, neutrales Grau */
+    color: #EDEDED; /* Heller Text für besseren Kontrast */
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%; /* Sicherstellen, dass die Höhe 100% des Viewports einnimmt */
+}
+
+.sidebar {
+    width: 25%;
+    background: #2E3A35; /* Dezenter Grünton für Professionalität */
+    padding: 20px;
+    overflow-y: auto;
+    border-right: 2px solid #46594D; /* Schmaler Rand für Struktur */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); /* Leichter Schatten für Tiefe */
+    color: #EDEDED; /* Einheitliche Textfarbe */
+}
+
+main {
+    flex: 1; /* Automatische Breite für Hauptbereich */
+    padding: 30px;
+    overflow-y: auto;
+    background-color: #3F4E4A; /* Neutrales Dunkelgrün */
+    color: #F1F1F1; /* Textfarbe, die gut mit dem Hintergrund harmoniert */
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2); /* Innerer Schatten für subtile Tiefe */
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    margin: 10px 0;
+}
+
+nav li.folder,
+nav li.file {
+    padding-left: calc(var(--depth, 0) * 20px); /* Dynamische Einrückung */
+    cursor: pointer;
+    color: #9BAFA7; /* Dezenter Grünton für besseren Kontrast */
+    transition: color 0.3s, background-color 0.3s; /* Sanfte Übergänge */
+    border-radius: 4px; /* Abgerundete Ecken */
+    padding: 5px;
+}
+
+nav li.folder:hover,
+nav li.file:hover {
+    background-color: #46594D; /* Dezenter Hintergrund beim Hover */
+    color: #EDEDED; /* Hellerer Text beim Hover */
+}
+
+nav li.folder > ul {
+    display: none; /* Start collapsed */
+}
+
+nav li.folder.open > ul {
+    display: block; /* Zeige Inhalte bei geöffneten Ordnern */
+}
+
+nav li.file a {
+    text-decoration: none;
+    color: inherit; /* Nutze die gleiche Textfarbe */
+    font-weight: 500; /* Leicht fetter für bessere Erkennbarkeit */
+}
+
+nav li.file a:hover {
+    text-decoration: underline;
+    color: #A8C0B6; /* Dezenter heller Ton beim Hover */
+}
+
+/* Styling für Ordner */
+.folder {
+    border-left: 3px solid #9BAFA7; /* Dezenter Rahmen für Struktur */
+    padding-left: 10px;
+    background-color: #2E3A35; /* Gleiche Farbe wie Sidebar */
+    font-weight: bold;
+    color: #EDEDED; /* Einheitlicher Textton */
+}
+
+/* Media Queries für Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        border-right: none;
+        box-shadow: none;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+}

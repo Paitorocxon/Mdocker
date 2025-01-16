@@ -1,0 +1,192 @@
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Tannenberg', serif;
+    font-weight: normal;
+    display: flex;
+    margin: 0;
+    height: 100%;
+    background-color: #0C0C0C; /* Tiefes Schwarz für Hintergrund */
+    color: #F5F5F5; /* Sehr helles Weiß für Text */
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.sidebar {
+    width: 25%;
+    background: #1A1A1A; /* Dunkles Schwarz für die Sidebar */
+    padding: 20px;
+    overflow-y: auto;
+    border-right: 4px solid #B22222; /* Roter Akzent */
+    color: #F5F5F5;
+}
+
+main {
+    flex: 1; /* Automatische Breite für den Hauptbereich */
+    padding: 30px;
+    overflow-y: auto;
+    background-color: #121212; /* Etwas helleres Schwarz für den Hauptbereich */
+    color: #FFFFFF; /* Reines Weiß für Text */
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    margin: 10px 0;
+    padding: 10px;
+    background: #1A1A1A; /* Gleicher Hintergrund wie die Sidebar */
+    color: #F5F5F5;
+    border-left: 4px solid transparent; /* Platz für aktiven Zustand */
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+nav li:hover {
+    background-color: #B22222; /* Roter Hover-Effekt */
+    color: #FFFFFF; /* Helle Schrift bleibt konsistent */
+}
+
+nav li.folder {
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+nav li.folder.open {
+    border-left-color: #FFFFFF; /* Weißer Akzent für geöffnete Ordner */
+}
+
+nav li.folder > ul {
+    display: none; /* Start collapsed */
+}
+
+nav li.folder.open > ul {
+    display: block; /* Zeige Inhalte bei geöffneten Ordnern */
+}
+
+nav li.file a {
+    text-decoration: none;
+    color: #F5F5F5;
+    font-weight: 400; /* Etwas leichter als Ordner */
+}
+
+nav li.file a:hover {
+    text-decoration: underline;
+    /*color: #B22222; /* Rote Farbe für Links beim Hover */
+}
+
+/* Styling für Ordner */
+.folder {
+    border-left: 4px solid transparent;
+    padding: 10px 12px;
+    background-color: #1A1A1A; /* Gleiche Farbe wie Sidebar */
+    color: #F5F5F5;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.folder:hover {
+    background-color: #b2222226; /* Roter Akzent beim Hover */
+    border-left-color: #FFFFFF; /* Weißer Rand als Akzent */
+}
+
+/* Titel, Banner oder wichtige Elemente */
+.header {
+    background-color: #B22222; /* Kaiserliches Rot */
+    color: #FFFFFF; /* Weißer Text für Kontrast */
+    text-align: center;
+    padding: 20px 0;
+    font-size: 2rem;
+    font-family: 'Tannenberg', serif;
+    font-weight: bold;
+    letter-spacing: 3px;
+    border-bottom: 4px solid #000000; /* Schwarzer Rand für Akzent */
+}
+
+/* Buttons und Interaktive Elemente */
+.button {
+    background-color: #B22222; /* Kaiserliches Rot */
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    border-radius: 0; /* Klare Ecken für ein starkes Erscheinungsbild */
+}
+
+.button:hover {
+    background-color: #FFFFFF; /* Weiß beim Hover */
+    color: #B22222; /* Roter Text für Kontrast */
+    border-color: #000000; /* Schwarzer Rand */
+}
+
+/* Footer */
+.footer {
+    background-color: #000000; /* Tiefes Schwarz */
+    color: #F5F5F5;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9rem;
+    border-top: 4px solid #B22222; /* Roter Rand */
+}
+
+/* Responsive Anpassungen */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        border-right: none;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .header {
+        font-size: 1.5rem;
+        padding: 15px 0;
+    }
+}
+
+
+
+
+
+
+
+
+@font-face {
+    font-family: 'Tannenberg';
+    src: url('fonts/Blankenburg.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Tannenberg';
+    src: url('fonts/Tannenberg-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Tannenberg Contour';
+    src: url('fonts/Tannenberg-Contour.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

@@ -1,0 +1,82 @@
+/* Hintergrund und Textfarben für den gesamten Codeblock */
+pre, code {
+    background-color: #011627; /* Dunkler Hintergrund */
+    color: #d6deeb; /* Helle Schriftfarbe */
+    font-family: "Fira Code", Consolas, Menlo, Monaco, "Courier New", monospace; /* Monospace-Schrift */
+    font-size: 14px;
+    line-height: 1.5;
+    overflow-x: auto;
+    padding: 1em;
+    border-radius: 8px; /* Abgerundete Ecken */
+}
+
+/* Hervorgehobener Code */
+.hljs {
+    color: #d6deeb;
+    background: #011627;
+}
+
+/* Kommentare */
+.hljs-comment,
+.hljs-quote {
+    color: #637777;
+    font-style: italic;
+}
+
+/* Schlüsselwörter */
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-section,
+.hljs-doctag {
+    color: #c792ea;
+    font-weight: bold;
+}
+
+/* Zeichenketten, Literale */
+.hljs-string,
+.hljs-regexp,
+.hljs-meta,
+.hljs-meta-string {
+    color: #ecc48d;
+}
+
+/* Zahlen */
+.hljs-number,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-link {
+    color: #f78c6c;
+}
+
+/* Funktionen und Methoden */
+.hljs-title,
+.hljs-title.class_,
+.hljs-title.function_ {
+    color: #82aaff;
+    font-weight: bold;
+}
+
+/* Tags */
+.hljs-tag {
+    color: #7fdbca;
+}
+
+/* Attribute */
+.hljs-attribute {
+    color: #80cbc4;
+}
+
+/* Operators, Punctuation */
+.hljs-operator,
+.hljs-punctuation {
+    color: #89ddff;
+}
+
+/* Hervorhebungen */
+.hljs-emphasis {
+    font-style: italic;
+}
+.hljs-strong {
+    font-weight: bold;
+}
